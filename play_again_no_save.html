@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+{% block main_content %} 
+<h1>Bad Luck!</h1>
+
+<p>
+    <!-- <a href ="{{ url_for('county') }}">Play Again</a> -->
+    <a href="{{ url_for('county_no_save') }}"><img
+        src="{{ url_for('static', filename='birme-80x100/play_again.jpg') }}" alt="Play button" /></a>
+
+</p>
+{% endblock %} 

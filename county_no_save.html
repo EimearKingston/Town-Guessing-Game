@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<h1>Town: {{ town }}</h1>
+
+<form action="" method="POST" novalidate>
+
+    {{ form.hidden_tag() }}
+    {{ form.c_county.label }}
+    {{ form.c_county() }}
+    {% for error in form.c_county.errors %}
+    {{error}}
+    {% endfor %}
+
+    </br>
+    </br>
+
+
+    {{ form.submit() }}
+    </br>
+    </br>
+    {{ form.streak.label }}
+    {{ form.streak(disabled=True) }}
+    
+    
+</form>
+<!-- <p>
+    High Score: {{ high_score }}
+</p> -->
+<p><b>Warning!</b>: Your streak will not be saved as this version is intended for users who are not logged in</p>
+<p>{{ message }}</p>
+{% if comments %} 
+    <table>
+        <caption><b>Comments({{ total }}):</b></caption>
+        
+        {% for comment in comments %} 
+            <tr> 
+                <td>{{ comment["comment"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+<p>Want to leave a comment? Click <a href="{{ url_for('comments') }}">here</a></p>
+
+
+
+
+
+{% endblock %}

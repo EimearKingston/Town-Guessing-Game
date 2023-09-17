@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="icon" href="static/favicon_io/favicon.ico" />
+
+</head>
+
+<body>
+    <header>
+        <h1>
+            {{ title }}
+        </h1>
+        <nav>
+            </ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            
+            {% if g.user %}
+            <li>
+                <p>Username: {{ g.user }}</p>
+            </li>
+            <li>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{{ url_for('sign_up') }}">Sign up</a>
+            </li>
+            <li>
+                <a href="{{ url_for('login') }}">Login</a>
+            </li>
+
+            {% endif %}
+    </header>
+    <main>
+        
+        {% block main_content %}
+    
+        {% endblock %}
+        
+    </main>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+form{
+    text-align: center;
+}
+p, h2{
+    font-family:'Comic Sans';
+    text-align:center;
+}
+header{
+    background-color:royalblue;   
+}
+h2>a{
+    background-color:royalblue;
+    padding:0.5em;
+    border-radius:1em; 
+    border:royalblue solid 0.5em;
+}
+
+body{
+    background-color:peachpuff;
+}
+h1{
+    text-align:center;
+}
+img{
+    border-radius:1em;
+    margin: 0 1rem;
+    margin-bottom:2em;
+    padding:2em;
+    border: royalblue solid 0.5em;
+}
+aside>img{
+    /* border-radius:1em;
+    margin: 0 1rem;
+    margin-bottom:2em; */
+    padding:2em; 
+    
+}
+table{
+    border-collapse:collapse;
+    width:80%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+th,td{
+    border: royalblue solid 0.5em;
+    vertical-align: middle;
+    border-right: 1px solid royalblue;
+    border-left: 1px solid royalblue;
+    border-bottom: 1px solid royalblue;
+    border-top:1px solid royalblue;
+}
+aside{
+    background-color:royalblue;
+    list-style:none;
+    float:right; 
+    margin-right:1em;
+    /* margin-left:80%; */
+    padding:1em;
+    border-radius:1em;
+}
+aside li{
+    border-radius:0.2em;
+    /* width:fit-content; */
+    text-decoration:none;
+}
+figure{
+    display:grid;
+    text-align:center;
+    column-gap:normal;
+    column-count:2;
+    break-inside: avoid;
+    width:80%;
+    /* float:left; */
+
+}
+
+
+/* @font-face{
+    font-family: Unifraktur Maguntia;
+    src:url('static/UnifrakturMaguntia-Regular.ttf');
+} */
+nav{
+    text-align:center;
+}
+@media (hover: hover){
+    li:hover{
+    background-color:white;
+    
+    }
+}
+@media (hover: hover){
+    p a:hover{
+    background-color:white;
+    
+    }
+}
+/* footer{
+    background-color: green;
+    padding:1em;
+    border-radius:0.5em;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} */
+nav li{
+    
+    display:inline-block;
+    background-color:royalblue;
+    list-style:none;
+    font-size:larger;
+    flex:1;
+    
+
+    
+    padding:0.5em;
+    
+    text-decoration: none;
+   
+    border:royalblue solid 0.5em;
+    
+
+    border-radius:1em; 
+    font-family:'Times New Roman', 'Cambria, Cochin', Georgia, Times, 'Times New Roman', serif 
+    
+}
+/* main p{
+    color:royalblue;
+    float:right;
+    background-color:white;
+    /* border: royalblue solid 0.5em; */
+/* }
+form+p{
+    color:black;
+    text-align:center;
+    float:none;
+    background-color:peachpuff;
+}
+table+p{
+    color:black;
+    text-align:center;
+    float:none;
+    background-color:peachpuff;
+} 
+#clickImage{
+    display:grid;
+    column-gap:normal;
+    column-count:3;
+    break-inside: avoid;
+    float:right;
+} */
+/* section>p{
+    float:right;
+} */ 

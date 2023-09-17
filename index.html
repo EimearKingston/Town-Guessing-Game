@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block main_content %}
+<p>
+    Instructions: Choose the <b>correct</b>
+    corresponding county to the Irish town
+    that is displayed
+</p>
+<section id="clickImage"></section>
+<figure>
+    <section id="clickImage">
+        <!-- <h2>Click image to play Saved Game!</h2> -->
+        <a href="{{ url_for('county') }}"><img
+                src="{{ url_for('static', filename='index_image.jpg') }}" alt="Play button" /></a>
+       
+        <!-- <h2>Click image to play Unsaved Game!</h2> -->
+        <a href="{{ url_for('county_no_save') }}"><img
+                src="{{ url_for('static', filename='index_image2.jpg') }}" alt="Play button" /></a>
+        
+                <aside>
+
+                    <p>
+                        <li>
+                            <a href="{{ url_for('comments') }}">Comments</a>
+                        </li>
+                    </p>
+                    <p>
+                        <li>
+                            <a href="{{ url_for('leaderboard') }}">LeaderBoard</a>
+                        </li>
+                
+                        <img src="{{ url_for('static', filename='map.jpg') }}" alt="Map of Ireland" />
+                
+                </aside>
+        <!-- <p>
+            Instructions: Choose the <b>correct</b>
+            corresponding county to the Irish town
+            that is displayed
+        </p> -->
+
+</figure>
+
+
+</section>
+
+{% endblock %}
+<aside>
+
+    <p>
+        <li>
+            <a href="{{ url_for('comments') }}">Comments</a>
+        </li>
+    </p>
+    <p>
+        <li>
+            <a href="{{ url_for('leaderboard') }}">LeaderBoard</a>
+        </li>
+
+        <img src="{{ url_for('static', filename='map.jpg') }}" alt="Map of Ireland" />
+
+</aside>

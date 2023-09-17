@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block main_content %}
+<p>
+    <b>High Score: {{ high_score }}</b>
+</p>
+<h1>Town: {{ town }}</h1>
+
+<form action="" method="POST" novalidate>
+
+    {{ form.hidden_tag() }}
+    {{ form.c_county.label }}
+    {{ form.c_county() }}
+    {% for error in form.c_county.errors %}
+    {{error}}
+    {% endfor %}
+
+    </br>
+    </br>
+
+
+    {{ form.submit() }}
+    </br>
+    </br>
+    {{ form.streak.label }}
+    {{ form.streak(disabled=True) }}
+    
+    
+</form>
+
+<p>{{ message }}</p>
+{% if comments %} 
+    <table>
+        <caption><b>Comments({{ total }}):</b></caption>
+        
+        {% for comment in comments %} 
+            <tr> 
+                <td>{{ comment["comment"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+<p>Want to leave a comment? Click <a href="{{ url_for('comments') }}">here</a></p>
+
+
+
+
+
+{% endblock %}

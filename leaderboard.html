@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+{% if leaders %} 
+    <table>
+        <caption><b>Top 10</b></caption>
+        <tr>
+            <th>Username</th>
+            <th>Score</th>
+        </tr>
+        {% for score in leaders %} 
+            <tr> 
+               
+                <td>{{ score["username"] }}</td>
+                <td>{{ score["point"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+<p>Want to join the leaderboard? <a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('sign_up') }}">Sign up.</a></p>
+{% endif %}
+{% endblock %}
